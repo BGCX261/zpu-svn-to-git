@@ -1,0 +1,24 @@
+H 2141964 10 3 0 10 10 0 0 0 0
+L 4 ieee 19 $MODEL_TECH/../ieee
+L 3 std 18 $MODEL_TECH/../std
+L 4 work 4 work
+D 36 work.dualport_ram(dualport_ram_arch) OjnE@:9Rb?XYzdmnM1X`f1 5 1
+D 21 work.fpga_top(behave) okk`>FozOhfA:KWMaUT8f3 9 1
+D 18 work.timer(behave) @EaaW?GPbd81IR57c[F5L3 7 1
+D 18 work.trace(behave) M`49hNJ:YCnIN3;O6jd;l3 4 1
+D 13 work.txt_util kCW42]f2blKm_A8jXSbh81 0 1
+D 19 work.txt_util(body) 2<f^J?V3jbcJKMW?izL1B1 1 1
+D 15 work.zpu_config S;[LJGiKzH=5J_Se[]mo<3 2 1
+D 21 work.zpu_core(behave) Bj0gbZ4MfZ<SdHGCSz_Vd3 6 1
+D 19 work.zpu_io(behave) nX5JSU>bVJeajQF8AZ5;Y2 8 1
+D 11 work.zpupkg YnjWkhlZKb8:;N96U?iV92 3 1
+2 0  0 2<f^J?V3jbcJKMW?izL1B1 1 1 1
+2 0  0 TN`<gk@IDa1DNN:n[eM^n3 5 5 1
+2 0  0 da`gI>M8W:1^DfMm0o4=Q2 8 8 1
+2 0  0 3IY@Ve5>ZHi:j8jjGOXRE3 9 9 1
+2 0  0 9_k``mYJ8S]dDQGdE4?1F1 3 3 1
+2 0  0 <@j33MkdUKdcjS2cEVWAJ1 0 0 1
+2 0  0 EKRlVAlo56DEWI:56LI7E2 2 2 1
+2 0  0 dkOCY8MeeS7GB]eX0cdch3 4 4 1
+2 0  0 XJc2XMRgNKm^dSV5ai4hW1 6 6 1
+2 0  0 RJLM4ng1S8VJj>3b;Clni0 7 7 1

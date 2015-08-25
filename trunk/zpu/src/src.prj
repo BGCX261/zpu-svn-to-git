@@ -1,0 +1,33 @@
+[Project ID]
+Signature=UE Proj: v.1
+[Project Information]
+Use Relative Directory=1
+Relative to Project File=1
+Project Start=D9070C0004001100160024001D00000058
+Include Sub Directories=1
+Project Tagfile=
+Project Wordfile=
+Filter=
+Create Tagfile=0
+Working Time=5630
+[Files]
+0=G:\xilinx\zpu\zpu\src\
+[Open Files]
+Active File Display Mode=3
+Active File Index=1
+Open File Line0=0
+Open File Line1=0
+Open File Line2=0
+Open File Pos0=0
+Open File Pos1=41
+Open File Pos2=62
+Open File Window Pos0=0,1,-1,-1,-4,-30,66,87,856,497
+Open File Window Pos1=2,3,-1,-1,-4,-30,88,116,878,526
+Open File Window Pos2=0,1,-1,-1,-4,-30,110,145,900,555
+Open File0=G:\xilinx\zpu\zpu\src\hwtest\test.dis
+Open File1=G:\xilinx\zpu\zpu\src\hwtest\test.S
+Open File2=E:\zpu\zpu\roadshow\roadshow\hwtest\test.S
+Open File3=
+[Folders]
+G:\xilinx\zpu\zpu\src\=1
+G:\xilinx\zpu\zpu\src\ - hwtest=1

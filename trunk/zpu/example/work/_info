@@ -1,0 +1,306 @@
+m255
+13
+cModel Technology
+dG:\xilinx\zpu\zpu\example
+T_opt
+VJFM[NanEeFE7Jg4AinCd62
+04 8 6 work fpga_top behave 0
+o-quiet -auto_acc_if_foreign -work work
+tExplicit 1
+OE;O;6.2b;35
+Edualport_ram
+w1258267846
+DP work zpupkg YnjWkhlZKb8:;N96U?iV92
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP work zpu_config S;[LJGiKzH=5J_Se[]mo<3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+dG:\xilinx\zpu\zpu\example
+Fhelloworld.vhd
+l0
+L44
+VJP6L:ic<2@FMEzhoz`4oO1
+OE;C;6.2b;35
+31
+o-93 -explicit
+tExplicit 1
+Adualport_ram_arch
+DP work zpupkg YnjWkhlZKb8:;N96U?iV92
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP work zpu_config S;[LJGiKzH=5J_Se[]mo<3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work dualport_ram JP6L:ic<2@FMEzhoz`4oO1
+l3047
+L56
+VOjnE@:9Rb?XYzdmnM1X`f1
+OE;C;6.2b;35
+31
+M6 ieee std_logic_1164
+M5 ieee numeric_std
+M4 work zpu_config
+M3 ieee std_logic_unsigned
+M2 ieee std_logic_arith
+M1 work zpupkg
+o-93 -explicit
+tExplicit 1
+Efpga_top
+w1258261044
+DP work zpupkg YnjWkhlZKb8:;N96U?iV92
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP work zpu_config S;[LJGiKzH=5J_Se[]mo<3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+dG:\xilinx\zpu\zpu\example
+Fsim_small_fpga_top_noint.vhd
+l0
+L48
+VL1:TG`f?bo2N>gUhb4Yeg1
+OE;C;6.2b;35
+31
+o-93 -explicit
+tExplicit 1
+Abehave
+DP work zpupkg YnjWkhlZKb8:;N96U?iV92
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP work zpu_config S;[LJGiKzH=5J_Se[]mo<3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work fpga_top L1:TG`f?bo2N>gUhb4Yeg1
+l112
+L51
+Vokk`>FozOhfA:KWMaUT8f3
+OE;C;6.2b;35
+31
+M6 ieee std_logic_1164
+M5 ieee numeric_std
+M4 work zpu_config
+M3 ieee std_logic_unsigned
+M2 ieee std_logic_arith
+M1 work zpupkg
+o-93 -explicit
+tExplicit 1
+Etimer
+w1258261016
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+dG:\xilinx\zpu\zpu\example
+F../zpu4/src/timer.vhd
+l0
+L5
+V3bD_[FDhM7gTdUiSz]3W62
+OE;C;6.2b;35
+31
+o-93 -explicit
+tExplicit 1
+Abehave
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work timer 3bD_[FDhM7gTdUiSz]3W62
+l25
+L16
+V@EaaW?GPbd81IR57c[F5L3
+OE;C;6.2b;35
+31
+M2 ieee std_logic_1164
+M1 ieee numeric_std
+o-93 -explicit
+tExplicit 1
+Etrace
+w1258261016
+DP work txt_util kCW42]f2blKm_A8jXSbh81
+DP work zpupkg YnjWkhlZKb8:;N96U?iV92
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP work zpu_config S;[LJGiKzH=5J_Se[]mo<3
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+dG:\xilinx\zpu\zpu\example
+F../zpu4/src/trace.vhd
+l0
+L47
+VLJ4^DE_QEWZQgSOFA1cQV1
+OE;C;6.2b;35
+31
+o-93 -explicit
+tExplicit 1
+Abehave
+DP work txt_util kCW42]f2blKm_A8jXSbh81
+DP work zpupkg YnjWkhlZKb8:;N96U?iV92
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP work zpu_config S;[LJGiKzH=5J_Se[]mo<3
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work trace LJ4^DE_QEWZQgSOFA1cQV1
+l71
+L65
+VM`49hNJ:YCnIN3;O6jd;l3
+OE;C;6.2b;35
+31
+M8 ieee std_logic_1164
+M7 ieee numeric_std
+M6 std textio
+M5 work zpu_config
+M4 ieee std_logic_unsigned
+M3 ieee std_logic_arith
+M2 work zpupkg
+M1 work txt_util
+o-93 -explicit
+tExplicit 1
+Ptxt_util
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+w1258261016
+dG:\xilinx\zpu\zpu\example
+F../zpu4/src/txt_util.vhd
+l0
+L41
+VkCW42]f2blKm_A8jXSbh81
+OE;C;6.2b;35
+31
+b1
+M2 ieee std_logic_1164
+M1 std textio
+o-93 -explicit
+tExplicit 1
+Bbody
+DB work txt_util kCW42]f2blKm_A8jXSbh81
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+l0
+L41
+V2<f^J?V3jbcJKMW?izL1B1
+OE;C;6.2b;35
+31
+M2 ieee std_logic_1164
+M1 std textio
+o-93 -explicit
+tExplicit 1
+nbody
+Pzpu_config
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+w1258261044
+dG:\xilinx\zpu\zpu\example
+Fzpu_config.vhd
+l0
+L40
+VS;[LJGiKzH=5J_Se[]mo<3
+OE;C;6.2b;35
+31
+M3 ieee std_logic_1164
+M2 ieee std_logic_unsigned
+M1 ieee std_logic_arith
+o-93 -explicit
+tExplicit 1
+Ezpu_core
+w1258261024
+DP work zpupkg YnjWkhlZKb8:;N96U?iV92
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP work zpu_config S;[LJGiKzH=5J_Se[]mo<3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+dG:\xilinx\zpu\zpu\example
+F../zpu4/core/zpu_core_small.vhd
+l0
+L44
+V2<_`^1o8al:8m4XE773NH1
+OE;C;6.2b;35
+31
+o-93 -explicit
+tExplicit 1
+Abehave
+DP work zpupkg YnjWkhlZKb8:;N96U?iV92
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP work zpu_config S;[LJGiKzH=5J_Se[]mo<3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work zpu_core 2<_`^1o8al:8m4XE773NH1
+l182
+L70
+VBj0gbZ4MfZ<SdHGCSz_Vd3
+OE;C;6.2b;35
+31
+M6 ieee std_logic_1164
+M5 ieee numeric_std
+M4 work zpu_config
+M3 ieee std_logic_unsigned
+M2 ieee std_logic_arith
+M1 work zpupkg
+o-93 -explicit
+tExplicit 1
+Ezpu_io
+w1258261016
+DP work txt_util kCW42]f2blKm_A8jXSbh81
+DP work zpupkg YnjWkhlZKb8:;N96U?iV92
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP work zpu_config S;[LJGiKzH=5J_Se[]mo<3
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+dG:\xilinx\zpu\zpu\example
+F../zpu4/src/io.vhd
+l0
+L12
+Va86O@]S^VAQXZPTcY16B52
+OE;C;6.2b;35
+31
+o-93 -explicit
+tExplicit 1
+Abehave
+DP work txt_util kCW42]f2blKm_A8jXSbh81
+DP work zpupkg YnjWkhlZKb8:;N96U?iV92
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP work zpu_config S;[LJGiKzH=5J_Se[]mo<3
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work zpu_io a86O@]S^VAQXZPTcY16B52
+l44
+L29
+VnX5JSU>bVJeajQF8AZ5;Y2
+OE;C;6.2b;35
+31
+M8 ieee std_logic_1164
+M7 ieee numeric_std
+M6 std textio
+M5 work zpu_config
+M4 ieee std_logic_unsigned
+M3 ieee std_logic_arith
+M2 work zpupkg
+M1 work txt_util
+o-93 -explicit
+tExplicit 1
+Pzpupkg
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP work zpu_config S;[LJGiKzH=5J_Se[]mo<3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+w1258261024
+dG:\xilinx\zpu\zpu\example
+F../zpu4/core/zpupkg.vhd
+l0
+L42
+VYnjWkhlZKb8:;N96U?iV92
+OE;C;6.2b;35
+31
+M5 ieee std_logic_1164
+M4 ieee numeric_std
+M3 work zpu_config
+M2 ieee std_logic_unsigned
+M1 ieee std_logic_arith
+o-93 -explicit
+tExplicit 1

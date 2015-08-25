@@ -1,0 +1,148 @@
+-- ZPU
+--
+-- Copyright 2004-2008 oharboe - Øyvind Harboe - oyvind.harboe@zylin.com
+-- 
+-- The FreeBSD license
+-- 
+-- Redistribution and use in source and binary forms, with or without
+-- modification, are permitted provided that the following conditions
+-- are met:
+-- 
+-- 1. Redistributions of source code must retain the above copyright
+--    notice, this list of conditions and the following disclaimer.
+-- 2. Redistributions in binary form must reproduce the above
+--    copyright notice, this list of conditions and the following
+--    disclaimer in the documentation and/or other materials
+--    provided with the distribution.
+-- 
+-- THIS SOFTWARE IS PROVIDED BY THE ZPU PROJECT ``AS IS'' AND ANY
+-- EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+-- THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+-- PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+-- ZPU PROJECT OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
+-- INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+-- (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+-- OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+-- HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+-- STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+-- ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+-- ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-- 
+-- The views and conclusions contained in the software and documentation
+-- are those of the authors and should not be interpreted as representing
+-- official policies, either expressed or implied, of the ZPU Project.
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use ieee.numeric_std.all;
+
+---- Uncomment the following library declaration if instantiating
+---- any Xilinx primitives in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;
+
+library work;
+use work.zpu_config.all;
+use work.zpupkg.all;
+
+--tang
+use work.alzpu.all;
+use work.alzpu_config.all;
+--use work.alzpu_ethernet.all;--tang
+
+entity zpu_top is
+	port(
+		clk    : in std_logic;
+		areset : in std_logic;
+		LED    : inout std_logic_vector(7 downto 0);
+		RxD_pad: in std_logic;
+	   TxD_pad: out std_logic
+		);
+end zpu_top;
+
+architecture behave of zpu_top is
+
+component  zpu_io is
+  generic (
+           log_file:       string  := "log.txt"
+          );
+  port(
+       	clk         : in std_logic;
+       	areset        : in std_logic;
+		busy : out std_logic;
+		writeEnable : in std_logic;
+		readEnable : in std_logic;
+		write	: in std_logic_vector(wordSize-1 downto 0);
+		read	: out std_logic_vector(wordSize-1 downto 0);
+		addr : in std_logic_vector(maxAddrBit downto minAddrBit)
+		);
+end component;
+
+component alzpu_io is
+  port(
+    slave_in  : in zpu_slave_in_type;
+    slave_out : out zpu_slave_out_type;
+    interrupt : out std_logic;
+    gpio_pad    : inout std_logic_vector(alzpu_gpio_num-1 downto 0);
+	 RxD_pad:   in std_logic;
+	 TxD_pad:   out std_logic
+  );
+end component alzpu_mctrl;
+
+signal slave_in: zpu_slave_in_type;
+signal slave_out: zpu_slave_out_type;
+signal			  mem_busy : std_logic;
+signal			  mem_read : std_logic_vector(wordSize-1 downto 0);
+signal			  mem_write : std_logic_vector(wordSize-1 downto 0);
+signal			  mem_addr : std_logic_vector(maxAddrBitIncIO downto 0);
+signal			  mem_writeEnable : std_logic; 
+signal			  mem_readEnable : std_logic;
+signal			  mem_writeMask: std_logic_vector(wordBytes-1 downto 0);
+signal			  enable : std_logic;
+signal break : std_logic;
+
+begin
+	memoryctrl : alzpu_io
+		port map(
+		 slave_in  => slave_in,
+		 slave_out => slave_out,
+		 interrupt => open,
+		 gpio_pad  => LED,
+		 RxD_pad   => RxD_pad,
+		 TxD_pad   => TxD_pad
+	);
+	
+	slave_in.clk <= clk;
+	slave_in.rst <= areset;	
+	slave_in.wr_en <= mem_writeEnable;
+	slave_in.rd_en <= mem_readEnable;
+	slave_in.addr <= mem_addr;
+	slave_in.dati <= mem_write;
+	mem_busy  <= slave_out.busy;
+	mem_read  <= slave_out.dato;
+
+	zpu: zpu_core port map (
+		clk => clk ,
+	 	areset => areset,
+	 	enable => enable,
+ 		in_mem_busy => mem_busy, 
+ 		mem_read => mem_read,
+ 		mem_write => mem_write, 
+		out_mem_addr => mem_addr, 
+		out_mem_writeEnable => mem_writeEnable,  
+		out_mem_readEnable => mem_readEnable,
+ 		mem_writeMask => mem_writeMask, 
+ 		interrupt => '0',
+ 		break  => break);
+
+	memoryControlSync:
+	process(clk, areset)
+	begin
+		if areset = '1' then
+			enable <= '0';			
+		elsif (clk'event and clk = '1') then
+			enable <= '1';
+		end if;
+	end process;
+
+end behave;

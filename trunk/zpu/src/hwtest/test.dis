@@ -1,0 +1,27 @@
+
+test.elf:     file format elf32-zpu
+
+Disassembly of section .text:
+
+00000000 <.text>:
+   0:	0b          	nop
+   1:	0b          	nop
+   2:	b0          	im 48
+   3:	0a          	flip
+   4:	0b          	nop
+   5:	81          	im 1
+   6:	0c          	store
+   7:	0b          	nop
+   8:	0b          	nop
+   9:	0b          	nop
+   a:	0b          	nop
+   b:	0b          	nop
+   c:	0b          	nop
+   d:	80          	im 0
+   e:	e0          	im -32
+   f:	80          	im 0
+  10:	80          	im 0
+  11:	84          	im 4
+  12:	0b          	nop
+  13:	82          	im 2
+  14:	0c          	store

@@ -1,0 +1,8 @@
+zpu-elf-gcc -Os -abel crt0_phi.S horselight.c -o horselight.elf -Wl,--relax -Wl,--gc-sections -nostdlib
+zpu-elf-objdump --disassemble-all -S >horselight.dis horselight.elf
+zpu-elf-objcopy -O binary horselight.elf horselight.bin
+cat >../zpurom.vhd zpurom.vhd_header
+./a horselight.bin >>../zpurom.vhd
+cat >>../zpurom.vhd zpurom.vhd_footer
+zpu-elf-size horselight.elf
+zpu-elf-objdump -d horselight.elf
